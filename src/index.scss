@@ -1,0 +1,64 @@
+@import "./style/variables.scss";
+@import "./style/brakpoints.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  @include sm {
+    font-size: 10px;
+  }
+  @include md {
+    font-size: 15px;
+  }
+}
+body {
+  font-family: $SansPro-Regular;
+  color: $primary;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.heading-main {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: $dark;
+  font-family: $SansPro-Bold;
+}
+
+.heading-sub {
+  font-size: 1.6rem;
+  color: $gray;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 80rem;
+  display: block;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.content-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: $dark;
+}
+
+.content-details {
+  font-size: 1.6rem;
+  max-width: 60rem;
+  line-height: 1.7;
+  color: $gray;
+  padding: 2rem 0;
+}
+
+.bold {
+  font-weight: bold;
+}

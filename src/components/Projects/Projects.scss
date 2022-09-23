@@ -1,0 +1,35 @@
+@import "../../style/brakpoints.scss";
+
+.project {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem 2rem;
+  width: auto;
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url("../../images/bg.svg");
+  &__header {
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__main {
+    img {
+      width: 100%;
+      margin-top: 3rem;
+      @include sm {
+        width: 80%;
+      }
+      @include md {
+        width: 65%;
+        max-width: 900px;
+      }
+    }
+  }
+}

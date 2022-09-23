@@ -1,0 +1,61 @@
+@import "../../style/variables.scss";
+@import "../../style/brakpoints.scss";
+
+.about {
+  padding: 5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  &__header {
+    padding-bottom: 4rem;
+    text-align: center;
+    p {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      @include md {
+        max-width: 1050px;
+      }
+    }
+  }
+  &__section {
+    margin-bottom: 5rem;
+    text-align: left;
+  }
+  &__skills {
+    padding-bottom: 3rem;
+    &__header {
+      margin-bottom: 2.3rem;
+    }
+    &__container {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      &__skill {
+        padding: 1rem 2rem;
+        background: rgba(153, 153, 153, 0.2);
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $gray;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.about {
+  @include md {
+    display: flex;
+    flex-wrap: wrap;
+    &__header {
+      width: 100%;
+    }
+    &__section {
+      width: 50%;
+      padding: 1rem 2rem;
+    }
+    &__skills {
+      width: 50%;
+      padding: 1rem 1rem;
+    }
+  }
+}
