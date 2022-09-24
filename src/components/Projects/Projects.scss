@@ -19,17 +19,4 @@
     justify-content: center;
     align-items: center;
   }
-  &__main {
-    img {
-      width: 100%;
-      margin-top: 3rem;
-      @include sm {
-        width: 80%;
-      }
-      @include md {
-        width: 65%;
-        max-width: 900px;
-      }
-    }
-  }
 }

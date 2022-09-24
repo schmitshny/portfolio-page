@@ -1,19 +1,71 @@
 @import "../../style/brakpoints.scss";
+@import "../../style/variables.scss";
 
 .singleproject {
-  padding-bottom: 5rem;
+  padding: 6rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-top: 1px solid rgba(169, 169, 169, 0.3);
+  border-top: 1px solid rgba(186, 186, 186, 0.366);
+  max-width: 1400px;
+  margin: 0 auto;
+  &__image {
+    // box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: -1px 1px 16px -3px rgba(66, 68, 90, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .overlay {
+        opacity: 1;
+      }
+      img {
+        filter: blur(2px);
+      }
+    }
+    @include md {
+      width: 80%;
+      margin-bottom: 3rem;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  &__container {
+    padding: 2rem 0;
+  }
 }
 
 .buttons-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
+  margin-top: 3rem;
   @include xs {
     flex-direction: column;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  color: $yellow;
+  opacity: 0;
+  z-index: 100;
+  transition: 0.5s opacity;
+
+  h2 {
+    padding-top: 20%;
+    font-size: 5rem;
+    text-shadow: 3px 0px 5px rgba(255, 255, 255, 1);
   }
 }

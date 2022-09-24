@@ -1,4 +1,5 @@
 import Button from "../UI/Button";
+import Skill from "../UI/Skill";
 import "./About.scss";
 
 const About = () => {
@@ -35,14 +36,18 @@ const About = () => {
           My Skills
         </header>
         <section className="about__skills__container">
-          <div className="about__skills__container__skill">HTML</div>
-          <div className="about__skills__container__skill">HTML</div>
-          <div className="about__skills__container__skill">HTML</div>
-          <div className="about__skills__container__skill">HTML</div>
-          <div className="about__skills__container__skill">HTML</div>
-          <div className="about__skills__container__skill">HTML</div>
-          <div className="about__skills__container__skill">HTML</div>
-          <div className="about__skills__container__skill">Express Basics</div>
+          <Skill
+            skills={[
+              "html",
+              "html",
+              "html",
+              "html",
+              "html",
+              "html",
+              "html",
+              "Express Basics",
+            ]}
+          />
         </section>
       </section>
     </section>

@@ -1,7 +1,7 @@
 // import Button from "../UI/Button";
 import "./Projects.scss";
 import Project from "./Project";
-import project from "../../images/project.jpeg";
+import project from "../../images/whereaboutsproject.png";
 
 const Projects = () => {
   return (

@@ -15,12 +15,16 @@
   transition: transform 0.3s;
   cursor: pointer;
   @include md {
-    width: 280px;
-
-    padding: 1rem 2rem;
-
+    width: 240px;
+    padding: 0.8rem 2rem;
+    font-size: 1.3rem;
     &:hover {
       transform: translateY(-5px);
     }
+  }
+  @include lg {
+    width: 280px;
+
+    padding: 1rem 2rem;
   }
 }
