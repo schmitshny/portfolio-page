@@ -1,6 +1,9 @@
 import Button from "../UI/Button";
 import "./main.scss";
-import githubIcon from "./../../images/github-dark.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faFileInvoice } from "@fortawesome/free-solid-svg-icons";
+import { downloadPDF } from "../../util/util";
 const Main = () => {
   return (
     <main className="main">
@@ -14,10 +17,18 @@ const Main = () => {
       </header>
       <aside className="contact">
         <div className="contact__icon">
-          <img src={githubIcon} alt="github" />
+          <a
+            href="https://github.com/schmitshny"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
         </div>
         <div className="contact__icon">
-          <img src={githubIcon} alt="github" />
+          <a href="#">
+            <FontAwesomeIcon icon={faFileInvoice} onClick={downloadPDF} />
+          </a>
         </div>
       </aside>
     </main>
