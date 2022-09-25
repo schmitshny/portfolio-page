@@ -25,7 +25,10 @@ const Project: React.FC<ProjectProps> = ({
       <div className="singleproject__image">
         <img src={image} alt="project" />
         <div className="overlay">
-          <h2>Check This Out!</h2>
+          <a href={linkToPage} target="_blank" rel="noreferrer">
+            {" "}
+            <h2>Check This Out!</h2>
+          </a>
         </div>
       </div>
 
