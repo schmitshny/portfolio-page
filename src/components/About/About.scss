@@ -2,7 +2,7 @@
 @import "../../style/brakpoints.scss";
 
 .about {
-  padding: 5rem 2rem;
+  padding: 8rem 2rem 5rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
   &__header {
@@ -20,9 +20,10 @@
   &__section {
     margin-bottom: 5rem;
     text-align: left;
+    padding-left: 2rem;
   }
   &__skills {
-    padding-bottom: 3rem;
+    padding: 3rem 2rem;
     &__header {
       margin-bottom: 2.3rem;
     }

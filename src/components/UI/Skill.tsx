@@ -10,7 +10,11 @@ const Skill: React.FC<{
     <section className="container" style={style}>
       {skills.map((skill) => {
         return (
-          <div className="container__skill" style={stackStyles}>
+          <div
+            className="container__skill"
+            style={stackStyles}
+            key={Math.random()}
+          >
             {skill}
           </div>
         );

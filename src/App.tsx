@@ -1,5 +1,6 @@
 import "./App.scss";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/header/Header";
 import Main from "./components/main/main";
@@ -12,6 +13,7 @@ function App() {
       <Main />
       <About />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   );

@@ -26,6 +26,11 @@ code {
     monospace;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .heading-main {
   font-size: 3.6rem;
   text-transform: uppercase;

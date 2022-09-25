@@ -1,16 +1,32 @@
 import "./Footer.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSun,
+  faEnvelope,
+  faFileInvoice,
+} from "@fortawesome/free-solid-svg-icons";
+import { downloadPDF } from "../../util/util";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <section className="footer__intro">
-        <h3>Marcin Bugaj</h3>
-        <p>
-          A Frontend focused Web Developer building the Frontend of Websites and
-          Web Applications that leads to the success of the overall product
-        </p>
+        <div className="footer__intro__cv" onClick={downloadPDF}>
+          <h3>
+            <FontAwesomeIcon icon={faFileInvoice} />
+          </h3>
+          <p>DOWNLOAD CV</p>
+        </div>
+        <div className="footer__intro__email">
+          <h3>
+            <FontAwesomeIcon icon={faEnvelope} />
+          </h3>
+          <p>mbugaj93@gmail.com</p>
+        </div>
       </section>
-      <section className="footer__copyrights">Copyright 2022</section>
+      <section className="footer__copyrights">
+        <FontAwesomeIcon icon={faSun} />
+      </section>
     </footer>
   );
 };

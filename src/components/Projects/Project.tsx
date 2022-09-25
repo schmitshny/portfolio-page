@@ -6,15 +6,19 @@ import Skill from "../UI/Skill";
 interface ProjectProps {
   title: string;
   details: string;
-  buttonText: string;
   image: any;
+  skills: string[];
+  linkToGithub: string;
+  linkToPage: string;
 }
 
 const Project: React.FC<ProjectProps> = ({
   title,
   details,
-  buttonText,
   image,
+  skills,
+  linkToGithub,
+  linkToPage,
 }) => {
   return (
     <div className="singleproject">
@@ -29,26 +33,17 @@ const Project: React.FC<ProjectProps> = ({
         <header className="content-title ">{title}</header>
         <p className="content-details">{details}</p>
         <Skill
-          skills={[
-            "html",
-            "html",
-            "html",
-            "html",
-            "html",
-            "html",
-            "html",
-            "Express Basics",
-            "html",
-            "Express Basics",
-            "html",
-            "Express Basics",
-          ]}
+          skills={skills}
           style={{ justifyContent: "center", gap: "1.1rem" }}
           stackStyles={{ fontSize: "1.1rem", padding: "0.5rem 1rem" }}
         />
         <div className="buttons-container">
-          <Button text={buttonText} />
-          <Button text="Source code" />
+          <a href={linkToPage} target="_blank" rel="noreferrer">
+            <Button text="Preview" />
+          </a>
+          <a href={linkToGithub} target="_blank" rel="noreferrer">
+            <Button text="Source code" />
+          </a>
         </div>
       </section>
     </div>

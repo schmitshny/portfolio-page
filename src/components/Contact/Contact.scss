@@ -1,0 +1,82 @@
+@import "../../style/variables.scss";
+@import "../../style/brakpoints.scss";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 5rem 2rem;
+
+  &__header {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem 6rem 2rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 95%;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url("../../images/bg.svg");
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  border-radius: 5px;
+  label {
+    text-align: left;
+    color: $gray500;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  input,
+  textarea {
+    font-family: $SansPro-Bold;
+    padding: 1.5rem 2rem;
+    margin-bottom: 0.6rem;
+    color: $gray300;
+    border: 1px solid #ebebeb;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  button {
+    margin: 0 auto;
+    background-color: $yellow;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 170px;
+    color: $primary;
+    font-family: $SansPro-Bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    cursor: pointer;
+    @include md {
+      width: 240px;
+      padding: 0.8rem 2rem;
+      font-size: 1.3rem;
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+    @include lg {
+      width: 280px;
+
+      padding: 1rem 2rem;
+    }
+  }
+}

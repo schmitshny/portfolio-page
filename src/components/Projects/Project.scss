@@ -20,6 +20,10 @@
     &:hover {
       .overlay {
         opacity: 1;
+
+        h2 {
+          animation: overlayAnimation 0.8s;
+        }
       }
       img {
         filter: blur(2px);
@@ -58,14 +62,30 @@
   bottom: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
-  color: $yellow;
   opacity: 0;
   z-index: 100;
   transition: 0.5s opacity;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   h2 {
-    padding-top: 20%;
-    font-size: 5rem;
-    text-shadow: 3px 0px 5px rgba(255, 255, 255, 1);
+    font-size: 2rem;
+    border: 2px solid white;
+    color: white;
+    padding: 1rem 3rem;
+    background-color: rgba(71, 71, 71, 0.447);
+  }
+}
+
+@keyframes overlayAnimation {
+  0% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 1.5rem;
+  }
+  100% {
+    margin-bottom: 0;
   }
 }

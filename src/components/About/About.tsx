@@ -1,10 +1,11 @@
+import { HashLink } from "react-router-hash-link";
 import Button from "../UI/Button";
 import Skill from "../UI/Skill";
 import "./About.scss";
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <header className="about__header">
         <h2 className="heading-main">About me</h2>
         <p className="heading-sub">
@@ -19,17 +20,17 @@ const About = () => {
           the Front-end of Websites and Web Applications that leads to the
           success of the overall product. Check out some of my work in the
           Projects section. <br />
-          <br /> I also like sharing content related to the stuff that I have
-          learned over the years in Web Development so it can help other people
-          of the Dev Community. Feel free to Connect or Follow me on my Linkedin
-          where I post useful content related to Web Development and Programming
+          <br /> I am a fourth year student in the field of
+          <span className="bold"> computer science.</span>
           <br />
           <br />
           I'm open to Job opportunities where I can contribute, learn and grow.
           If you have a good opportunity that matches my skills and experience
           then don't hesitate to contact me.
         </p>
-        <Button text="Contact" />
+        <HashLink smooth to="#contact">
+          <Button text="Contact" />
+        </HashLink>
       </section>
       <section className="about__skills">
         <header className="content-title about__skills__header">
@@ -38,14 +39,22 @@ const About = () => {
         <section className="about__skills__container">
           <Skill
             skills={[
-              "html",
-              "html",
-              "html",
-              "html",
-              "html",
-              "html",
-              "html",
-              "Express Basics",
+              "JavaScript",
+              "TypeScript",
+              "HTML",
+              "CSS",
+              "SAss",
+              "REAct",
+              "Redux",
+              "Redux Toolkit",
+              "Basics of Node.js",
+              "rest",
+              "Express",
+              "GraphQl",
+              "Basic c#/c++",
+              "sql",
+              "Nosql",
+              "MongoDb",
             ]}
           />
         </section>
